@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/react-syncfusion-grids/static/css/main.4a15d136.css",
+    "main.js": "/react-syncfusion-grids/static/js/main.cb0080eb.js",
+    "static/js/592.5bd712bc.chunk.js": "/react-syncfusion-grids/static/js/592.5bd712bc.chunk.js",
+    "index.html": "/react-syncfusion-grids/index.html",
+    "main.4a15d136.css.map": "/react-syncfusion-grids/static/css/main.4a15d136.css.map",
+    "main.cb0080eb.js.map": "/react-syncfusion-grids/static/js/main.cb0080eb.js.map",
+    "592.5bd712bc.chunk.js.map": "/react-syncfusion-grids/static/js/592.5bd712bc.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4a15d136.css",
+    "static/js/main.cb0080eb.js"
+  ]
+}
