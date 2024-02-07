@@ -1,25 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import { useState } from "react";
+import { Grid, PivotTable, SwitchButton } from "./component";
+import {
+  dataSourceSettings,
+  dropDownList,
+  gridColumnsData,
+  gridOptions,
+} from "./data";
 function App() {
+  const [section, setSection] = useState<"grid" | "table">("grid");
+  const sections = {
+    grid: (
+      <Grid
+        url="https://services.syncfusion.com/react/production/api/UrlDataSource"
+        columnsData={gridColumnsData}
+        dropDownList={dropDownList}
+        gridOptions={gridOptions}
+      />
+    ),
+    table: <PivotTable data={dataSourceSettings} />,
+  };
+  const switchButtonList = [
+    {
+      title: "Grid",
+      onClick: () => setSection("grid"),
+    },
+    {
+      title: "Table",
+      onClick: () => setSection("table"),
+    },
+  ];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className="App">
+      <SwitchButton list={switchButtonList} active={0} />
+      <section style={{ padding: "2rem" }}>{sections[section]}</section>
+    </main>
   );
 }
 
